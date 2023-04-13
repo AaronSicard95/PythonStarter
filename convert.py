@@ -14,6 +14,15 @@ def convert_temp(unit_in, unit_out, temp):
       convert_temp("c", "f", 0)  =>  32.0
       convert_temp("f", "c", 212) => 100.0
     """
+    check = 0
+    if unit_in == "f" and unit_out == "c":
+        check = (temp - 32)*.5556
+    elif unit_in == "c" and unit_out == "f":
+        check = temp*1.8+32  
+    else:
+        return "invalid"
+    
+    return check
 
     # YOUR CODE HERE
 
